@@ -1,0 +1,190 @@
+@import
+//"compass/reset",
+//"compass/css3",
+"constants",
+"games/WordComprehensionGame";
+
+.full {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+strong {font-weight: bold;}
+
+html {@extend .full;}
+
+body {
+    @extend .full;
+    background-color: $light-blue;
+    font-family: sans-serif;
+
+    //  &.ingame {
+    //  }
+
+    transition: background 1s ease-in;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+#app {
+    @extend .full;
+
+    footer {
+        bottom: 25px;
+        position: absolute;
+        right: 25px;
+    }
+}
+
+#session {
+    @extend .full;
+}
+
+#game {
+    @extend .full;
+}
+
+#progressbar {
+    height: 21px;
+    left: 512px;
+    line-height: 25px;
+    margin-left: -150px;
+    overflow: hidden;
+    padding: 2px;
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    width: 300px;
+    z-index: 10;
+
+    .bar {
+        height: 21px;
+        width: 0;
+    }
+}
+
+#reward {
+    background: #000 center center no-repeat;
+    background-size: contain;
+    color: #FFF;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 15;
+
+    h1 {font-size: 40px; margin: 150px 0 20px;}
+}
+
+#btn-start {
+    background: url("../images/btn-start.png") top left no-repeat;
+    display: block;
+    height: 378px;
+    left: 50%;
+    margin-left: -225px;
+    margin-top: -189px;
+    position: absolute;
+    top: 45%;
+    width: 450px;
+}
+
+footer .btn {
+    display: inline-block;
+}
+
+#btn-parents {
+    background: url("../images/btn-parents.png") top left no-repeat;
+    height: 116px;
+    width: 259px;
+}
+
+#btn-dashboard {
+    background: url("../images/btn-dashboard.png") top left no-repeat;
+    height: 101px;
+    width: 99px;
+}
+
+#dashboard {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    top: 20px;
+
+    em {
+        background-color: #FFE87C;
+        padding: 2px 4px;
+    }
+
+    .col {
+        float: left;
+        width: 47%;
+    }
+    .col + .col {
+        margin-left: 6%;
+    }
+
+    .close {
+        float: right;
+        color: $blue;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 36px;
+        padding: 0 10px;
+        text-decoration: none;
+    }
+
+    h1 {
+        color: $blue;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 36px;
+        margin-bottom: 14px;
+        text-transform: uppercase;
+    }
+    h2 {
+        margin-bottom: 10px;
+    }
+    fieldset {
+        border-top: 4px dotted transparentize($blue, 0.5);
+        padding: 20px 0;
+        line-height: 26px;
+
+        &.log {
+            clear: both;
+        }
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+    input, select {
+        padding: 5px;
+    }
+    button {
+        font-size: 16px;
+        padding: 5px 15px;
+    }
+
+    .modal-layer {
+      background-color: rgba(0,0,0,0.9);
+      border-radius: 20px;
+      bottom: 0;
+      display: none;
+      left: 0;
+      padding: 100px 20px 20px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+
+      h1 {color: $light-gray; margin-bottom: 40px;}
+      progress {width: 400px;}
+    }
+}
